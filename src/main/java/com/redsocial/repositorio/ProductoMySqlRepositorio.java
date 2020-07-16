@@ -29,7 +29,7 @@ public class ProductoMySqlRepositorio implements ProductoRepositorio{
 
 	@Override
 	public int actualiza(Producto obj) {
-		 return jdbcTemplate.update("update producto set nombre =?, marca =?, stock =?, estado =?, precio =? where idproducto =? ", new Object[] { obj.getNombre(), obj.getMarca(),obj.getPrecio(),obj.getStock(),obj.getIdProducto()});
+		 return jdbcTemplate.update("update producto set nombre =?, marca =?, stock =?, precio =? where idproducto =? ", new Object[] { obj.getNombre(), obj.getMarca(),obj.getPrecio(),obj.getStock(),obj.getIdProducto()});
 
 	}
 
